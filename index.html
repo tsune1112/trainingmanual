@@ -3,140 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【完全版】トレーニングマニュアル - 脱・教科書トレーニング</title>
+    <title>【完全最終版】トレーニングマニュアル - 脱・教科書トレーニング</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --success-color: #2ecc71;
-            --warning-color: #f1c40f;
-            --background-color: #f4f6f8;
-            --text-color: #333;
-            --light-gray: #ecf0f1;
-            --white: #ffffff;
-            --shadow: 0 4px 15px rgba(0,0,0,0.1);
-            --header-height: 80px; /* ヘッダーの高さ分のオフセット */
+            --primary-color: #2c3e50; --secondary-color: #3498db; --accent-color: #e74c3c;
+            --success-color: #2ecc71; --warning-color: #f1c40f; --background-color: #f4f6f8;
+            --text-color: #333; --light-gray: #ecf0f1; --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1); --header-height: 20px;
         }
 
         html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--background-color); margin: 0; padding: 0; display: flex; }
 
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        #table-of-contents {
-            position: fixed;
-            left: 20px;
-            top: 20px;
-            width: 240px;
-            height: 95vh;
-            overflow-y: auto;
-            background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
+        #table-of-contents { position: fixed; left: 20px; top: 20px; width: 260px; height: 95vh; overflow-y: auto; background: var(--white); padding: 20px; border-radius: 10px; box-shadow: var(--shadow); transition: all 0.3s ease; }
         #table-of-contents h3 { margin-top: 0; color: var(--primary-color); font-family: 'Roboto', sans-serif; }
         #table-of-contents ul { list-style: none; padding: 0; }
-        #table-of-contents ul li a {
-            text-decoration: none; color: var(--secondary-color); display: block; padding: 8px 12px;
-            border-radius: 5px; transition: all 0.3s ease; font-size: 0.9em;
-        }
-        #table-of-contents ul li a:hover, #table-of-contents ul li a.active {
-            background-color: var(--secondary-color); color: var(--white); transform: translateX(5px);
-        }
+        #table-of-contents ul li a { text-decoration: none; color: var(--secondary-color); display: block; padding: 8px 12px; border-radius: 5px; transition: all 0.3s ease; font-size: 0.9em; }
+        #table-of-contents ul li a:hover, #table-of-contents ul li a.active { background-color: var(--secondary-color); color: var(--white); transform: translateX(5px); }
         #table-of-contents ul ul { padding-left: 15px; }
         #table-of-contents ul ul li a { font-size: 0.85em; color: #555; }
 
-        #main-content { margin-left: 300px; padding: 40px; max-width: 850px; width: calc(100% - 300px); }
-        
-        .content-section {
-            background: var(--white);
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            scroll-margin-top: var(--header-height);
-        }
+        #main-content { margin-left: 320px; padding: 40px; max-width: 850px; width: calc(100% - 320px); }
+        .content-section { background: var(--white); padding: 30px; margin-bottom: 40px; border-radius: 10px; box-shadow: var(--shadow); scroll-margin-top: var(--header-height); }
 
-        h1, h2, h3, h4, h5, h6 { 
-            font-family: 'Roboto', sans-serif; 
-            color: var(--primary-color); 
-            line-height: 1.4; 
-            scroll-margin-top: var(--header-height);
-        }
-        h1 { font-size: 3em; text-align: center; margin-bottom: 0.2em; color: var(--white); background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); padding: 40px; border-radius: 10px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; color: var(--primary-color); line-height: 1.4; scroll-margin-top: var(--header-height); }
+        h1 { font-size: 2.8em; text-align: center; margin-bottom: 0.2em; color: var(--white); background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); padding: 40px; border-radius: 10px; }
         .subtitle { text-align: center; font-size: 1.4em; color: var(--primary-color); margin-top: 0; margin-bottom: 2em; font-weight: bold; }
         h2 { font-size: 2.2em; border-bottom: 3px solid var(--secondary-color); padding-bottom: 0.4em; margin-top: 0; }
         h3 { font-size: 1.8em; color: var(--secondary-color); border-left: 5px solid var(--accent-color); padding-left: 10px; }
-        h4 { font-size: 1.5em; color: var(--primary-color); margin-top: 2em; margin-bottom: 1em; }
+        h4 { font-size: 1.6em; color: var(--primary-color); margin-top: 2.5em; margin-bottom: 1em; border-bottom: 2px solid var(--light-gray); padding-bottom: 0.5em;}
+        h5 { font-size: 1.3em; color: #34495e; margin-top: 2em; margin-bottom: 1em; }
 
         strong { color: var(--accent-color); font-weight: 700; }
         ul, ol { padding-left: 25px; margin-bottom: 1.2em; }
         li { margin-bottom: 0.8em; }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2em 0;
-            box-shadow: var(--shadow);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
-        th { background-color: var(--primary-color); color: var(--white); font-family: 'Roboto', sans-serif; border: none;}
-        tbody tr { background-color: var(--white); transition: background-color 0.3s ease; }
-        tbody tr:nth-child(even) { background-color: var(--light-gray); }
-        tbody tr:hover { background-color: #d6eaf8; }
-
-        .tooltip {
-            position: relative;
-            cursor: pointer;
-            color: var(--secondary-color);
-            font-weight: bold;
-            border-bottom: 2px dotted var(--secondary-color);
-        }
-        .tooltip .tooltip-text {
-            visibility: hidden; width: 280px; background-color: var(--primary-color); color: var(--white);
-            text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 1;
-            bottom: 125%; left: 50%; margin-left: -140px; opacity: 0; transition: opacity 0.3s;
-            font-size: 0.9rem; line-height: 1.6; font-weight: normal;
-        }
+        .tooltip { position: relative; cursor: pointer; color: var(--secondary-color); font-weight: bold; border-bottom: 2px dotted var(--secondary-color); }
+        .tooltip .tooltip-text { visibility: hidden; width: 280px; background-color: var(--primary-color); color: var(--white); text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -140px; opacity: 0; transition: opacity 0.3s; font-size: 0.9rem; line-height: 1.6; font-weight: normal; }
         .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
 
         .callout { padding: 20px; margin: 20px 0; border-left: 5px solid; border-radius: 5px; }
-        .callout-strategy { border-color: var(--success-color); background-color: #e8f8f5; }
-        .callout-warning { border-color: var(--accent-color); background-color: #fdedec; }
         .callout-principle { border-color: var(--warning-color); background-color: #fef9e7; }
-        .callout-title { font-weight: bold; font-size: 1.2em; margin-bottom: 0.5em; display: block; }
-        .callout-title::before { font-family: 'Arial'; margin-right: 10px; }
-        .callout-strategy .callout-title::before { content: '💡'; }
-        .callout-warning .callout-title::before { content: '⚠️'; }
-        .callout-principle .callout-title::before { content: '⭐'; }
         
-        .google-sheet-export {
-            background-color: #e6f4ea; border: 1px solid var(--success-color); padding: 15px;
-            margin: 1em 0; border-radius: 5px; font-family: monospace; color: #27ae60;
-        }
-        
-        .key-terms {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: var(--light-gray);
-            border-top: 3px solid var(--secondary-color);
-            border-radius: 0 0 10px 10px;
-        }
-        .key-terms h4 { margin-top: 0; }
+        .key-terms { margin-top: 40px; padding: 20px; background-color: var(--light-gray); border-top: 3px solid var(--secondary-color); border-radius: 0 0 10px 10px; }
+        .key-terms h4 { margin-top: 0; border: none; }
         .key-terms dl dt { font-weight: bold; color: var(--primary-color); }
         .key-terms dl dd { margin-left: 20px; margin-bottom: 10px; }
 
@@ -156,7 +68,23 @@
             <li><a href="#chapter1">第1章：思考の転換</a></li>
             <li><a href="#chapter2">第2章：評価の実践</a></li>
             <li><a href="#chapter3">第3章：プログラム設計</a></li>
-            <li><a href="#chapter4">第4章：種目選択の深化</a></li>
+            <li><a href="#chapter4">第4章：種目選択の深化</a>
+                <ul>
+                    <li><a href="#squat">1. スクワット</a></li>
+                    <li><a href="#hip-lift">2. ヒップリフト</a></li>
+                    <li><a href="#deadlift">3. デッドリフト</a></li>
+                    <li><a href="#pulldown">4. プルダウン</a></li>
+                    <li><a href="#chinning">5. チンニング</a></li>
+                    <li><a href="#rowing">6. ローイング</a></li>
+                    <li><a href="#pushup">7. プッシュアップ</a></li>
+                    <li><a href="#bench-press">8. ベンチプレス</a></li>
+                    <li><a href="#dumbbell-fly">9. ダンベルフライ</a></li>
+                    <li><a href="#crunch">10. クランチ</a></li>
+                    <li><a href="#twist-crunch">11. ツイストクランチ</a></li>
+                    <li><a href="#plank">12. プランク</a></li>
+                    <li><a href="#side-plank">13. サイドプランク</a></li>
+                </ul>
+            </li>
             <li><a href="#chapter5">第5章：知識の拡張</a></li>
             <li><a href="#conclusion">おわりに</a></li>
         </ul>
@@ -181,13 +109,6 @@
             <p>このような経験に、少しでも心当たりがあるのなら、あなたは今、トレーナーとして大きく成長するための重要な岐路に立っています。その壁の原因は、あなたの知識不足や経験不足だけではありません。多くの場合、それは<strong>「思考停止の種目選択」</strong>、つまり、目の前のクライアントの身体を見ずに、「教科書的な正解」に頼ってしまうことに起因します。</p>
             <blockquote>「教科書的な知識だけでは、目の前のクライアントに最適なトレーニングは提供できない」。</blockquote>
             <p>本マニュアルは、この普遍的な課題を克服するために作成されました。単なるエクササイズのやり方を解説するものではありません。クライアントの身体を解剖学的・運動学的に「読み解き」、その評価に基づいて最適な「動き」を処方するための思考プロセスそのものを提供するものです。</p>
-            <p>本書を読み終える頃には、あなたは以下の能力を身につけているでしょう。</p>
-            <ul>
-                <li>筋肥大だけを目的としたトレーニングから脱却し、ムーブメントを起点としたプログラムを設計できるようになる。</li>
-                <li>基本種目の本来の目的と本質を理解し、クライアントの状況に応じた代替種目を選択できるようになる。</li>
-                <li>科学的根拠に基づいた評価を行い、自信を持って「なぜ、この種目なのか？」を説明できる「本物のトレーナー」になる。</li>
-            </ul>
-            <p>さあ、教科書のページを一度閉じ、クライアントの身体という、世界に一冊だけの「生きた参考書」を読み解くための旅を始めましょう。</p>
         </section>
 
         <section id="chapter1" class="content-section">
@@ -202,24 +123,14 @@
                 <li><strong>逃走 (Escape):</strong> 危険から素早く、そして長く逃れる能力。持久力と瞬発力が最も重要です。</li>
                 <li><strong>闘争 (Fight):</strong> 自己防衛や競争場面で、瞬間的に最大出力を発揮する能力。瞬発力が最も重要とされます。</li>
             </ul>
-            <p>現代社会でこれらの能力が直接的に生死を分ける場面は少ないかもしれません。しかし、この視点は、「健康維持」や「生活の質（QOL）向上」といったクライアントの現代的なニーズの本質を捉えています。例えば、「階段を楽に上りたい」というニーズは「逃走」能力の応用であり、「孫を楽に抱っこしたい」は「救助」能力の応用と言えるのです。</p>
             
             <h4>「マッスルベース」アプローチの限界点</h4>
             <p>従来の「マッスルベース」のアプローチ、つまり「この筋肉を鍛えるためにはこの種目」という思考法は、ボディビルディングのように特定の筋肉を意図的に大きくするには有効です。しかし、このアプローチだけでは、「対象筋を意識する筋肥大トレーニングばかりやっていて姿勢が改善されたりパフォーマンスは向上するのか？」という根本的な問いに答えることはできません。</p>
-            <p>身体は、独立した筋肉の集合体ではなく、すべてのパーツが連動して機能する一つのシステムです。マッスルベースのアプローチは、この「連動性」を見過ごしがちになり、結果として、見た目の筋肉はついても、動きがぎこちなくなったり、特定の関節に負担が集中してしまったりするのです。</p>
             
             <h4>「ムーブメントベース」への転換</h4>
             <p>そこで我々が提唱するのが、<strong>動きを起点にプログラムを設計する「ムーブメントベース」</strong>のアプローチです。</p>
-            <ul>
-                <li><strong>思考の順序:</strong> 「どの筋肉を鍛えるか？」からではなく、「どのような動き（押す、引く、しゃがむ、捻るなど）を改善したいか？」から考え始めます。</li>
-                <li><strong>目的:</strong> 特定の筋肉の強化は、あくまで「より良い動き」を獲得するための結果として捉えます。</li>
-                <li><strong>効果:</strong> 身体全体の連動性が高まり、姿勢、パフォーマンス、そして日常生活の質の向上が期待できます。</li>
-            </ul>
-            <p>この思考の転換こそが、クライアントに本質的な変化をもたらすための第一歩です。</p>
 
             <h3 id="section1-2">1-2. 運動が生まれる仕組み：「感覚」が「動き」を作る</h3>
-            <p>「動き」を改善するためには、運動がどのようにして生まれるのかを知る必要があります。運動は、脳が一方的に筋肉へ指令を送るだけの単純なプロセスではありません。その根底には、膨大な「感覚」情報の処理と統合が存在します。</p>
-            
             <h4>運動のピラミッド：「感覚統合」の重要性</h4>
             <p>私たちのあらゆる学習や運動は、ピラミッドのような階層構造で成り立っています。</p>
             <ul>
@@ -227,30 +138,27 @@
                 <li><strong>中間層（姿勢・運動コントロール）:</strong> 土台となる感覚情報が脳で統合されることで、初めて「姿勢や筋力・眼球の動きのコントロール」が可能になります。これが「ボディイメージ」や「運動コントロールの基礎」を形成します。</li>
                 <li><strong>最上層（高次の機能）:</strong> この安定した土台と中間層があって初めて、「目と手の協調性」や「学習能力」「自己コントロール能力」といった高度な運動や学習が達成されます。</li>
             </ul>
-            <p>つまり、クライアントのスクワットフォームが崩れるのは、単に筋力が弱いからだけでなく、土台となる「固有感覚」や「平衡感覚」の統合がうまくいっていない可能性も考えられるのです。</p>
             
             <h4>運動制御の3要素</h4>
             <p>運動の成り立ちは、以下の3つの側面から理解することができます。</p>
             <ul>
-                <li><strong>モーターコントロール（運動制御）:</strong> 運動を調整・指揮する能力。神経系によって制御され、意識的な随意運動だけでなく、無意識の反射なども含まれます。</li>
-                <li><strong>モーターラーニング（運動学習）:</strong> 練習や経験によって、動作が永続的に変化するプロセス。指導者のフィードバックや練習方法が大きく影響します。</li>
+                <li><strong>モーターコントロール（運動制御）:</strong> 運動を調整・指揮する能力。</li>
+                <li><strong>モーターラーニング（運動学習）:</strong> 練習や経験によって、動作が永続的に変化するプロセス。</li>
                 <li><strong>モーターデベロップメント（運動発達）:</strong> 年齢や成熟に伴い、運動が変化していく過程。</li>
             </ul>
             
             <h4>フィードフォワードとフィードバック</h4>
-            <p>脳は、運動指令を出すと同時に、「遠心性コピー」という指令のコピーを作成します。このコピーを基に、これから行う動きによってどのような感覚が返ってくるかを予測します（<span class="tooltip">フィードフォワード<span class="tooltip-text">動き出す前に、脳が「これくらい力を出せば、こう動くだろう」と予測すること。</span></span>）。そして、実際に動いた結果生じた「実際の感覚フィードバック」と、予測した感覚を比較し、その「感覚誤差」を修正するように次の運動指令を更新していくのです（<span class="tooltip">フィードバック<span class="tooltip-text">実際に動いた結果、身体から脳へ送られる感覚情報。この情報をもとに、次の動きが修正される。</span></span>）。この絶え間ないループによって、私たちの動きは洗練されていきます。</p>
+            <p>脳は、運動指令を出すと同時に、「遠心性コピー」という指令のコピーを作成します。このコピーを基に、これから行う動きによってどのような感覚が返ってくるかを予測します（<span class="tooltip">フィードフォワード<span class="tooltip-text">動き出す前に、脳が「これくらい力を出せば、こう動くだろう」と予測すること。</span></span>）。そして、実際に動いた結果生じた「実際の感覚フィードバック」と、予測した感覚を比較し、その「感覚誤差」を修正するように次の運動指令を更新していくのです（<span class="tooltip">フィードバック<span class="tooltip-text">実際に動いた結果、身体から脳へ送られる感覚情報。この情報をもとに、次の動きが修正される。</span></span>）。</p>
 
             <h3 id="section1-3">1-3. 2つのアプローチを統合する</h3>
             <p>ムーブメントベースのアプローチは、感覚統合や運動制御の理論に基づき、<strong>「ナチュラルムーブメント（NM）」と「ウエイトトレーニング（WT）」</strong>という2つの異なるアプローチを意図的に統合します。</p>
-            
-            <h4>ナチュラルムーブメント（NM）の価値：身体操作と感覚入力の向上</h4>
+            <h5>ナチュラルムーブメント（NM）の価値：身体操作と感覚入力の向上</h5>
             <ul>
                 <li><strong>身体操作能力の向上:</strong> 外部の重りがないため、トレーニーは自身の<span class="tooltip">重心（Center of Gravity, COG）<span class="tooltip-text">Center of Gravityの略。物体の質量が集中していると見なせる理論上の点。</span></span>をコントロールすることに集中できます。</li>
                 <li><strong>多様な感覚入力:</strong> 様々な姿勢や動き、呼吸を通じて、前庭覚などの基礎感覚へ多様な刺激が入力され、感覚統合を促進します。</li>
                 <li><strong>モビリティとスタビリティの向上:</strong> ウエイトトレーニングでは不可能な、多平面にわたる複雑な動きを通じて、関節の可動域と安定性を同時に高めます。</li>
             </ul>
-            
-            <h4>ウエイトトレーニング（WT）の価値：筋力・パワーと感覚運動系への刺激</h4>
+            <h5>ウエイトトレーニング（WT）の価値：筋力・パワーと感覚運動系への刺激</h5>
             <ul>
                 <li><strong>筋力・パワーの向上:</strong> 自分の体重以上の負荷をかけることで、筋力やパワーを最も効率的に向上させることができます。</li>
                 <li><strong>感覚運動系への強力な刺激:</strong>
@@ -261,8 +169,7 @@
                 </li>
                 <li><strong>脳の活性化とパターン修正:</strong> スポーツ選手などは、競技特性に応じた特定の体の使い方（パターンスタック）を繰り返しますが、WTで所定の体の使い方を強制することは、その偏りを修正し、脳を活性化させ、組織の耐久性を高める効果があります。</li>
             </ul>
-            
-            <h4>重心（COG）と支持基底面（BOS）の理解</h4>
+            <h5>重心（COG）と支持基底面（BOS）の理解</h5>
             <p>NMとWTの根本的な違いは、<strong>重心（COG）と<span class="tooltip">支持基底面（BOS）<span class="tooltip-text">Base of Supportの略。身体が床と接地している領域。この範囲内に重心を収めることでバランスを保つ。</span></span></strong>の関係にあります。</p>
             <p>人間は、COGの真下を通る重心線をBOS内に収めることでバランスを保ち、意図的にBOSから外すことで移動（歩行など）を行います。NMはこの自身のCOGをコントロールするトレーニングですが、WTはウエイトを含んだCCOGをコントロールする必要があるため、より複雑で高負荷な運動課題となるのです。</p>
             
@@ -280,27 +187,11 @@
 
         <section id="chapter2" class="content-section">
             <h2>第2章：評価の実践 - クライアントの身体を「読む」技術</h2>
-            <p>第1章では、トレーニング指導の根幹となる「ムーブメントベース」の思考法を学びました。しかし、どれほど優れた理論を持っていても、目の前のクライアントの「現在地」を正確に把握できなければ、それは絵に描いた餅に終わってしまいます。クライアントの身体という唯一無二の地図を読み解く羅針盤、それが「評価」です。</p>
+            <div class="callout callout-principle"><span class="callout-title">原則：評価なくして、プログラムなし</span><p>評価とは、クライアントの身体と真摯に向き合い、その声に耳を傾ける「対話」のプロセスです。</p></div>
             
-            <h3 id="section2-1">2-1. 評価の心構え</h3>
-            <div class="callout callout-principle">
-                <span class="callout-title">原則：評価なくして、プログラムなし</span>
-                <p>これは、プロのトレーナーとして決して忘れてはならない鉄則です。評価とは、単にクライアントの体力測定をすることではありません。それは、クライアントの身体と真摯に向き合い、その声に耳を傾ける「対話」のプロセスです。この対話を通じて初めて、私たちは画一的なメニューを処方する「インストラクター」から、個別の課題を解決する「専門家」へと昇華できるのです。</p>
-            </div>
-            <h4>解剖学的アプローチの4つのメリット</h4>
-            <ul>
-                <li><strong>評価精度の向上:</strong> クライアントの姿勢や動作パターンの問題点を、表面的に「フォームが悪い」で終わらせるのではなく、「なぜそのように動くのか」という根本原因まで正確に特定できます。</li>
-                <li><strong>ターゲット筋への効果向上:</strong> 狙った筋肉に効果的に負荷をかけるための、関節の角度や力の方向を理解し、指導の質を高めることができます。</li>
-                <li><strong>安全性の確保:</strong> 関節や靭帯への不適切なストレスを回避し、怪我のリスクを劇的に低減できます。</li>
-                <li><strong>コミュニケーション能力の向上:</strong> 「なぜこのエクササイズが必要なのか」を解剖学的な根拠を持って説明できるため、クライアントの納得感と信頼度が格段に向上します。</li>
-            </ul>
-
             <h3 id="section2-2">2-2. 姿勢と動作の評価：体幹筋力評価基準</h3>
-            <p>あらゆる動作の土台となるのが「体幹」の安定性です。体幹筋力の低下は、様々な動作エラーとして表面化します。ここでは、クライアントの体幹安定性を評価し、適切なトレーニングプログラムを適用するための基準として、5つの基本動作チェックを導入します。</p>
             <table>
-                <thead>
-                    <tr><th>評価動作</th><th>想定されるエラー</th><th>考えられる原因</th></tr>
-                </thead>
+                <thead><tr><th>評価動作</th><th>想定されるエラー</th><th>考えられる原因</th></tr></thead>
                 <tbody>
                     <tr><td>オーバーヘッドスクワット</td><td>上半身の前傾、腰が過剰に反る、膝が内側に入る</td><td>体幹の安定性低下、腹圧不足、脊柱起立筋の過剰緊張</td></tr>
                     <tr><td>プランク（30秒保持）</td><td>腰が落ちる、背中が丸まる、体が左右にブレる</td><td>腹直筋・腹斜筋・多裂筋の筋力不足、骨盤の前後傾コントロール不全</td></tr>
@@ -311,47 +202,26 @@
             </table>
 
             <h3 id="section2-3">2-3. 原因の深掘り：追加評価</h3>
-            <p>上記の基本動作チェックでエラーが確認された場合、それは問題解決への重要な「手がかり」です。次に、エラーの種類ごとにシンプルな動作テストを追加し、問題の詳細を特定する「原因の深掘り」を行います。</p>
             <table>
-                <thead>
-                    <tr><th>評価動作</th><th>目的</th><th>方法</th></tr>
-                </thead>
+                <thead><tr><th>評価動作</th><th>目的</th><th>方法</th></tr></thead>
                 <tbody>
                     <tr><td>腹圧テスト</td><td>腹圧のコントロール能力の評価</td><td>仰向けで膝を立て、お腹に手を当てた状態で息を吸い、息を止めながら腹圧をかける（保持時間を計測）。</td></tr>
                     <tr><td>デッドバグ</td><td>体幹-四肢の協調性の評価</td><td>仰向けで膝90°・股関節90°に曲げた状態から、対角の手足を伸ばす（腰が浮かないかを確認）。</td></tr>
                     <tr><td>レッグレイズ</td><td>体幹屈曲筋群の評価</td><td>仰向けで足を浮かせ、ゆっくり降ろしていく（腰が反らないか確認）。</td></tr>
                     <tr><td>ブリッジ（両脚→片脚）</td><td>骨盤の安定性の評価</td><td>仰向けで膝を曲げ、腰を持ち上げる。片脚を浮かせた時の骨盤の安定性をチェック。</td></tr>
-                    <tr><td>四つ這い回旋（スパイナルローテーション）</td><td>体幹の回旋安定性の評価</td><td>四つ這いで片手を頭の後ろに置き、肘を開きながら回旋（骨盤がブレないかを確認）。</td></tr>
+                    <tr><td>四つ這い回旋</td><td>体幹の回旋安定性の評価</td><td>四つ這いで片手を頭の後ろに置き、肘を開きながら回旋（骨盤がブレないかを確認）。</td></tr>
                 </tbody>
             </table>
-            <div class="google-sheet-export">
-                <p>これらの追加評価によって、「オーバーヘッドスクワットで上半身が前に倒れる」という現象が、単なる「体幹の弱さ」ではなく、より具体的に「腹圧コントロール能力の不足」に起因する可能性が高い、といった仮説を立てることができるようになります。</p>
-            </div>
 
             <h3 id="section2-4">2-4. 評価のスコア化とプログラムへの橋渡し</h3>
-            <p>評価で得られた情報を、感覚や経験だけに頼るのではなく、客観的な基準に落とし込み、プログラムに直結させることが重要です。そのための具体的なフローと基準を以下に示します。</p>
-            <h4>体幹評価の流れ</h4>
-            <ol>
-                <li>オーバーヘッドスクワットを実施し、エラーを確認します。</li>
-                <li>確認されたエラーの種類に応じて追加評価を実施し、原因を特定します。</li>
-                <li>評価結果をもとに、体幹トレーニングの優先度を決定します。</li>
-                <li>後述のスコアに基づき、クライアントに適したトレーニングプログラムのフェーズを決定します。</li>
-            </ol>
-            <h4>体幹評価スコアと適用基準</h4>
-            <p>基本動作チェックで確認されたエラーの数に基づき、クライアントの現在地をスコア化します。</p>
             <table>
-                <thead>
-                    <tr><th>評価スコア</th><th>進行基準（適用フェーズ）</th><th>エクササイズ適用</th></tr>
-                </thead>
+                <thead><tr><th>評価スコア</th><th>進行基準（適用フェーズ）</th><th>エクササイズ適用</th></tr></thead>
                 <tbody>
-                    <tr><td>低スコア（エラー2つ以上）</td><td>フェーズ1（導入）</td><td>補助エクササイズのみ適用します。動作の習得を最優先し、負荷を増やすことはしません。</td></tr>
-                    <tr><td>中スコア（エラー1～2つ）</td><td>フェーズ2（基礎強化）</td><td>中間エクササイズまで追加します。基礎的な動作の安定性を高めていきます。</td></tr>
-                    <tr><td>高スコア（エラーなし or 軽微）</td><td>フェーズ3（安定強化）</td><td>メインエクササイズを導入し、負荷を増やして動作の安定性向上を目指します。</td></tr>
+                    <tr><td>低スコア（エラー2つ以上）</td><td>フェーズ1（導入）</td><td>補助エクササイズのみ適用。動作の習得を最優先。</td></tr>
+                    <tr><td>中スコア（エラー1～2つ）</td><td>フェーズ2（基礎強化）</td><td>中間エクササイズまで追加。基礎的な動作の安定性を高める。</td></tr>
+                    <tr><td>高スコア（エラーなし or 軽微）</td><td>フェーズ3（安定強化）</td><td>メインエクササイズを導入し、負荷を増やして安定性向上を目指す。</td></tr>
                 </tbody>
             </table>
-            <h4>評価のサイクル</h4>
-            <p>評価は一度きりで終わりではありません。クライアントの進捗を管理し、プログラムを最適化し続けるために、4週間ごとに再評価を実施します。スコアが改善すれば、次のフェーズへ進行する、という明確な基準を持つことで、指導に一貫性と説得力が生まれます。</p>
-            
             <div class="key-terms">
                 <h4>本章の重要語句解説</h4>
                 <dl>
@@ -363,158 +233,241 @@
 
         <section id="chapter3" class="content-section">
             <h2>第3章：プログラム設計の実践 -「トレーニングバッテリー」の構築と運用</h2>
-            <p>第2章で、我々はクライアントの身体という地図を「読む」技術を学びました。その評価によってクライアントの現在地と、目指すべきゴールへのルートが明確になった今、次はそのルートを実際に進むための、安全かつパワフルな乗り物、すなわち具体的なトレーニングプログラムを構築する段階です。</p>
-            <p>この章で紹介する<strong>「トレーニングバッテリー」</strong>は、第1章で学んだ「ムーブメントベース」の思想を、現場で実践可能な形に落とし込んだ、極めて効果的なプログラム設計手法です。単なる種目の羅列ではない、動きの質と筋力を同時に高めるための戦略的アプローチを、具体例と共に学んでいきましょう。</p>
-
-            <h3 id="section3-1">3-1. トレーニングバッテリーとは何か？</h3>
-            <h4>コンセプトの定義：NMとWTを統合するプログラム</h4>
-            <p>「トレーニングバッテリー」とは、ナチュラルムーブメント（NM）とウエイトトレーニング（WT）を統合させるためのプログラム設計の概念です。具体的には、似た要素のある種目や、動作モデルが類似しているNMとWTを「バッテリー」として組み合わせ、連続またはセットごとに実施します。</p>
-            <p>このアプローチの最大の利点は、<strong>シナジー（相乗効果）</strong>にあります。</p>
-            <ul>
-                <li><strong>NMで動きの質を高める:</strong> まずNMを行うことで、関節の可動域を確保し、眠っている筋肉を活性化させ、正しい動作パターンを神経系にインプット（<span class="tooltip">プライミング<span class="tooltip-text">先行する刺激（この場合はNM）が、後続の刺激（WT）の処理を促進する効果。神経系に動きの「予習」をさせること。</span></span>）します。</li>
-                <li><strong>WTでその動きを強化する:</strong> 正しい動作パターンがインプットされた状態でWTに移行することで、代償動作を抑え、狙った効果を安全かつ最大限に引き出すことができます。</li>
-            </ul>
-            <p>これは、「動きの学習」と「筋力向上」を一つのセッション内で完結させる、非常に効率的なシステムなのです。</p>
-
-            <h4>3つのエクササイズレベル：メイン、中間、補助</h4>
-            <p>トレーニングバッテリーを効果的に構築するために、エクササイズを以下の3つのレベルに分類して考えます。これは、クライアントのレベルや目的に応じて、プログラムの難易度を柔軟に調整するための基礎となります。</p>
-            <table>
-                <thead>
-                    <tr><th>レベル</th><th>内容・目的</th><th>例</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>メインエクササイズ</td><td>高負荷・大筋群を動員し、基本動作の習得・強化を目的とします。筋力、パワー、筋肥大といった目標に直接的に貢献する、プログラムの主役です。</td><td>バックスクワット、ベンチプレス、デッドリフト</td></tr>
-                    <tr><td>中間エクササイズ</td><td>メインエクササイズを安全かつ効果的に行うための橋渡しとなる種目です。メインエクササイズの分解動作や、可動域・安定性を向上させることを目的とします。</td><td>ゴブレットスクワット、スキャプラプッシュアップ、ケーブルRDL</td></tr>
-                    <tr><td>補助エクササイズ</td><td>動作の質そのものを高めるための、いわば<strong>「土台作り」</strong>のエクササイズです。モビリティ、スタビリティ、筋肉の活性化など、より基礎的な機能改善を目的とします。</td><td>90/90ヒップモビリティ、T-スパインローテーション、デッドハング</td></tr>
-                </tbody>
-            </table>
-            <p>指導の基本フローは、まず<strong>「補助」で身体の準備を整え、「中間」で正しい動きのパターンを学習し、最後に「メイン」</strong>でその動きに負荷をかけて強化する、という流れになります。クライアントのレベルに応じて、初心者であれば「中間」まで、中級者であれば全て、上級者であれば「中間」と「メイン」を中心に、といった調整を行います。</p>
-
-            <h3 id="section3-2">3-2. トレーニングバッテリーの作り方：具体例と解説</h3>
-            <p>ここでは、実際の指導現場で頻繁に遭遇するであろう課題に対し、トレーニングバッテリーをどのように適用するかを4つのケーススタディを通して学びます。</p>
+            <p><strong>「トレーニングバッテリー」</strong>とは、ナチュラルムーブメント（NM）とウエイトトレーニング（WT）を「バッテリー」として組み合わせ、動きの質と筋力を同時に高めるプログラム設計手法です。</p>
             
-            <h4>ケーススタディ①：胸椎回旋の改善とプルの連動</h4>
-            <p><strong>課題:</strong> 巻肩や円背姿勢のクライアント。ワンハンドローイングを行う際に、肩甲骨の動きではなく、肩関節の水平伸展や腕の力に頼る代償動作が見られる。</p>
-            <p><strong>バッテリーの提案:</strong></p>
-            <ul><li>補助/中間: スレッドザニードル</li><li>メイン: ワンハンドローイング</li></ul>
-            <p><strong>解説:</strong> スレッドザニードルは、四つ這いの安定した姿勢で、胸椎の回旋可動域を安全に向上させることができる優れたNMです。このエクササイズで胸椎と肩甲骨の連動性を高め、菱形筋や前鋸筋といった「プル動作」に必要な筋肉をあらかじめ活性化させます。この準備ができた状態でワンハンドローイングに移行することで、クライアントは腕力に頼ることなく、背中の筋肉を使って正しく引く感覚を掴みやすくなります。</p>
-
-            <h4>ケーススタディ②：プレス動作の安定化</h4>
-            <p><strong>課題:</strong> ベンチプレスでバーを降ろす際に肩がすくんで挙上してしまったり、ボトムポジションで肩甲骨が不安定になる。</p>
-            <p><strong>バッテリーの提案:</strong></p>
-            <ul><li>補助/中間: スワン on フォームローラー</li><li>メイン: ベンチプレス</li></ul>
-            <p><strong>解説:</strong> スワンは、うつ伏せで胸椎の伸展と肩甲骨の下制・後傾（ショルダーパッキング）を促すエクササイズです。フォームローラー上で行うことで、不安定性が加わり、より体幹の安定が求められます。このNMによって、プレス動作の土台となる「安定した胸郭と肩甲帯」を作り出します。この感覚を維持したままベンチプレスを行うことで、肩の余分な力みが抜け、大胸筋主導の安全で力強いプレスが可能になります。</p>
-
-            <h4>ケーススタディ③：肩甲帯の安定性向上とバーティカルプル</h4>
-            <p><strong>課題:</strong> ラットプルダウンや懸垂で、肩がすくんでしまい、広背筋よりも僧帽筋上部や腕ばかりが疲労する。</p>
-            <p><strong>バッテリーの提案:</strong></p>
-            <ul><li>補助/中間: ゲットアップ（特にトルコ式ゲットアップの一部）</li><li>メイン: ラットプルダウン</li></ul>
-            <p><strong>解説:</strong> ゲットアップは、ケトルベルなどを天に突き刺すように保持しながら、寝た状態から立ち上がるまでの一連の動作を行うエクササイズです。このプロセスを通じて、肩甲帯はあらゆる角度から負荷を受け、常に安定性を保つことを強いられます。特に、突き上げた腕の肩甲骨を安定させる感覚は、ラットプルダウンにおける「肩甲骨の下制」の感覚と直結します。ゲットアップで肩甲帯の安定性を徹底的に高めた後に行うラットプルダウンは、驚くほど背中に効く感覚が得られるでしょう。</p>
-
-            <h4>ケーススタディ④：スクワットパターンの修正</h4>
-            <p><strong>課題:</strong> スクワットでしゃがむ際に、臀部を後ろに引きすぎて腰椎が過剰に前弯してしまう。立ち上がる時には、お尻が先に上がり、上半身が前に倒れる「グッドモーニング型」のエラーが見られる。</p>
-            <p><strong>バッテリーの提案:</strong></p>
-            <ul><li>補助/中間: 内腹斜筋骨盤操作</li><li>メイン: スクワット</li></ul>
-            <p><strong>解説:</strong> このエラーの根本原因は、腹筋群（特に内腹斜筋）による骨盤コントロールの不足と、股関節屈筋群の過剰な活動にあります。座位で行う「内腹斜筋骨盤操作」は、骨盤を後傾させる感覚を養い、腰椎の過剰な反りを抑制する練習です。このNMで「お腹で骨盤をコントロールする」感覚を学習してからスクワットを行うことで、腰ではなく股関節主導の正しい動作パターンを促し、エラーの修正を目指します。</p>
-
-            <h3 id="section3-3">3-3. 目的別・フェーズ別プログラムの適用</h3>
-            <p>トレーニングバッテリーは、クライアントの目的と、第2章で評価した<strong>フェーズ（体幹安定性レベル）</strong>に応じて、その内容を最適化する必要があります。</p>
-            <h4>クライアントの3つの目的</h4>
+            <h3 id="section3-1">3-1. 3つのエクササイズレベル</h3>
             <table>
-                <thead><tr><th>目的</th><th>対象者</th><th>特徴</th></tr></thead>
+                <thead><tr><th>レベル</th><th>内容・目的</th><th>例</th></tr></thead>
                 <tbody>
-                    <tr><td>健康維持</td><td>一般的なフィットネス愛好者</td><td>筋力向上・柔軟性改善・関節の健康維持を目指す。</td></tr>
-                    <tr><td>ボディメイク（ダイエット）</td><td>体脂肪減少・代謝向上を目的とする方</td><td>高強度・短インターバルでエネルギー消費を促進することを目指す。</td></tr>
-                    <tr><td>リハビリ</td><td>過去のケガや痛みを抱える方</td><td>低負荷での筋力強化・関節可動域の向上を目指す。</td></tr>
+                    <tr><td>メインエクササイズ</td><td>高負荷・大筋群を動員し、筋力・パワー・筋肥大に直接貢献するプログラムの主役。</td><td>バックスクワット、ベンチプレス</td></tr>
+                    <tr><td>中間エクササイズ</td><td>メインエクササイズの橋渡し。分解動作や可動域・安定性を向上させる。</td><td>ゴブレットスクワット、ケーブルRDL</td></tr>
+                    <tr><td>補助エクササイズ</td><td>動作の質を高める「土台作り」。モビリティ、スタビリティ、筋肉の活性化が目的。</td><td>90/90ヒップモビリティ、デッドハング</td></tr>
                 </tbody>
             </table>
-            <h4>フェーズ別 適用基準</h4>
-            <table>
-                <thead><tr><th>フェーズ</th><th>適用対象者</th><th>進行基準（評価スコア）</th><th>適用するエクササイズ</th><th>負荷設定</th></tr></thead>
-                <tbody>
-                    <tr><td>フェーズ1（導入）</td><td>すべてのクライアント</td><td>低スコア（エラー2つ以上）</td><td>補助エクササイズのみ</td><td>30-50% 1RM、体重負荷中心</td></tr>
-                    <tr><td>フェーズ2（基礎強化）</td><td>軽度のエラーあり</td><td>中スコア（エラー1～2つ）</td><td>中間エクササイズまで追加</td><td>50-70% 1RM、軽負荷追加</td></tr>
-                    <tr><td>フェーズ3（安定強化）</td><td>動作が安定している</td><td>高スコア（エラーなし or 軽微）</td><td>メインエクササイズ導入</td><td>70-85% 1RM、中負荷</td></tr>
-                    <tr><td>フェーズ4（負荷向上）</td><td>高強度トレーニング希望者</td><td>高スコア（安定性確認済み）</td><td>メインエクササイズ中心</td><td>85-95% 1RM、高負荷</td></tr>
-                </tbody>
-            </table>
+
+            <h3 id="section3-2">3-2. トレーニングバッテリーの作り方：具体例</h3>
+            <p><strong>ケーススタディ①：胸椎回旋の改善とプルの連動</strong><br><strong>課題:</strong> ワンハンドローイングで腕の力に頼ってしまう。<br><strong>バッテリー提案:</strong> 補助/中間: スレッドザニードル → メイン: ワンハンドローイング</p>
+            <p><strong>ケーススタディ②：プレス動作の安定化</strong><br><strong>課題:</strong> ベンチプレスで肩がすくむ、肩甲骨が不安定。<br><strong>バッテリー提案:</strong> 補助/中間: スワン on フォームローラー → メイン: ベンチプレス</p>
             
             <div class="key-terms">
                 <h4>本章の重要語句解説</h4>
                 <dl>
                     <dt>トレーニングバッテリー</dt><dd>NM（ナチュラルムーブメント）とWT（ウエイトトレーニング）を組み合わせ、動きの質と筋力を同時に高めるプログラム設計手法。</dd>
                     <dt>プライミング</dt><dd>先行する刺激（NM）が後続の刺激（WT）の処理を促進する効果。神経系に動きの「予習」をさせること。</dd>
-                    <dt>メイン／中間／補助エクササイズ</dt><dd>目的と難易度に応じたエクササイズの3分類。補助で準備し、中間で学習し、メインで強化する。</dd>
                 </dl>
             </div>
         </section>
 
         <section id="chapter4" class="content-section">
             <h2>第4章：種目選択の深化 - 基本種目を徹底解剖する</h2>
-            <p>ここまでの章で、我々は「ムーブメントベース」の思考法、科学的な「評価」、そして「トレーニングバッテリー」という戦略的なプログラム設計を学んできました。この最終章では、その知識を日々の指導に落とし込むための、最も具体的で実践的な技術を磨きます。</p>
-            <p>それは、個々のエクササイズの「本質」を徹底的に解剖し、無数の選択肢の中から、目の前のクライアントにとって「今、本当に必要な一回」を提供できる能力です。</p>
+            <div class="callout callout-principle"><span class="callout-title">指導の核心</span>リグレッション（難易度を下げること）は、決して「逃げ」ではなく、クライアントを成功に導くための最も効果的で知的な<strong>「戦略」</strong>です。</div>
 
-            <h3 id="section4-1">4-1. 「なぜ、この種目なのか？」を常に自問する</h3>
-            <p>プロのトレーナーと、単なるエクササイズ指導者の違いは、この問いを自身に投げかけ続けているかどうかにあります。あなたの指導の一つ一つに、明確な意図と根拠を持つことが、クライアントからの信頼に繋がります。なぜスクワットなのか？なぜこのグリップ幅なのか？なぜこの回数なのか？その全てに、あなたの専門家としての思考が反映されていなければなりません。</p>
-            <div class="callout callout-strategy"><span class="callout-title">指導の核心</span>リグレッション（難易度を下げること）は、決して「逃げ」ではなく、クライアントを成功に導くための最も効果的で知的な<strong>「戦略」</strong>です。</div>
+            <h4 id="squat">1. スクワット（Squat）</h4>
+            <p>スクワットは「キング・オブ・エクササイズ」と称される通り、下半身全体の筋力向上、体幹の安定性、そして全身の協調性を養う上で非常に効果的な種目です。しかし、それゆえに多くの関節が関与し、代償動作が出やすい種目でもあります。</p>
+            <h5>1.【足関節背屈 - 膝関節屈曲 - 股関節屈曲の連鎖】</h5>
+            <p><strong>概要:</strong> スクワットのボトムポジションに向かう下降局面（エキセントリック）で中心となる連鎖です。足関節が適切に背屈（つま先がスネに近づく動き）することで、膝と股関節がスムーズに屈曲し、重心を安定させながら深くしゃがむことが可能になります。</p>
+            <p><strong>非活性化時のエラー:</strong></p><ul><li>ヒールリフト（Heel Lift）: 足関節の背屈可動域が不足していると、深くしゃがもうとした際に代償として踵が浮き上がります。</li><li>アーリーモーニング（Early Morning）: しゃがみきれない分を補うため、上半身が過剰に前傾します。</li></ul>
+            <p><strong>補助エクササイズ:</strong> ウォール・アンクルモビライゼーション<br><strong>中間エクササイズ:</strong> ヒールエレベーテッド・スクワット</p>
+            
+            <h5>2.【股関節外旋・外転 - 膝関節の安定化の連鎖】</h5>
+            <p><strong>概要:</strong> スクワット中、股関節の外旋・外転筋群（主に中殿筋）が働くことで大腿骨を外側に保ち、膝関節が内外にブレるのを防ぎます。</p>
+            <p><strong>非活性化時のエラー:</strong></p><ul><li>ニーイン（Knee-in）: 最も代表的なエラー。股関節の外旋・外転筋力が弱いと、膝が内側に入り込みます。</li></ul>
+            <p><strong>補助エクササイズ:</strong> クラムシェル, チューブウォーク<br><strong>中間エクササイズ:</strong> バンド・スクワット</p>
 
-            <h3 id="section4-2">4-2. プッシュ系エクササイズ</h3>
-            <h4>ベンチプレス：胸筋の効果的な強化と肩甲骨の安定</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> 単なる胸のトレーニングではなく、<strong>「安定した肩甲骨を土台として、大胸筋を最大限に収縮させる」</strong>ことが本質です。上肢と体幹の協調性を高め、上半身の「押す」力の基礎を築きます。適切なフォームでは、大胸筋が85-95%、三角筋前部が60-70%、上腕三頭筋が70-80%活性化します。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>肩が浮く・肩甲骨が不安定になる</li><li>腰が過度に反る</li><li>バーを首の方向に下ろす（肩への過剰なストレス）</li><li>手首が寝てしまう</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>肩甲骨の安定性: ベンチに横になった状態で、肩甲骨をしっかり内転・下制（寄せて下げる）し、固定できるか？</li><li>胸椎の可動性: 背中に適度なアーチ（胸椎の伸展）を作れるか？</li><li>肩関節の可動性: バーを胸まで下ろした際に、肩に痛みや違和感がないか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: ダンベルベンチプレス, フロアプレス, プッシュアップ</li><li>補助エクササイズ: スキャプラプッシュアップ, T-スパインローテーション, スワン on フォームローラー</li></ul></li>
-            </ul>
+            <h5>3.【脊柱の安定化（体幹） - 股関節ヒンジの連鎖】</h5>
+            <p><strong>概要:</strong> 脊柱（特に腰椎）がニュートラルな状態に固定され、その安定した土台の上で股関節が蝶番（ヒンジ）のように機能する連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong></p><ul><li>BUTT WINK（バットウィンク）: しゃがみ込んだ際に骨盤が後傾し、腰が丸まってしまう現象。</li><li>腰椎の過伸展（反り腰）: 常に腰を反らせて固めてしまうエラー。</li></ul>
+            <p><strong>補助エクササイズ:</strong> デッドバグ, バードドッグ<br><strong>中間エクササイズ:</strong> ボックススクワット</p>
 
-            <h4>ショルダープレス：三角筋の均等な発達と肩甲骨の安定</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> <strong>「肩甲骨の安定性を保ちながら、肩関節を健全に機能させ、上肢の押す力を向上させる」</strong>ことが本質です。単に三角筋を大きくすることだけが目的ではありません。正しいフォームでは、三角筋の前部・中部・後部がバランスよく活性化されます。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>腰を反らせて重量を挙げる</li><li>肘が前に出すぎる（三角筋前部に負荷が偏る）</li><li>肩をすくめた状態（僧帽筋上部の過緊張）で行う</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>肩甲骨の安定性: 腕を挙上する際に、肩甲骨が過度に挙上・上方回旋していないか？</li><li>体幹の安定性: 動作中に腰椎が過度に反っていないか？</li><li>肩関節の可動域: 痛みなく、スムーズに腕を頭上まで挙げられるか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: ハーフニーリングショルダープレス, ランドマインプレス, シングルアームダンベルプレス</li><li>補助エクササイズ: ウォールスライド, フェイスプル</li></ul></li>
-            </ul>
+            <h5>4.【広背筋の活性化 - 肩甲骨の安定 - 上半身の固定の連鎖】</h5>
+            <p><strong>概要:</strong> バーを担ぐ際、広背筋を活性化させて脇を締めることで、肩甲骨が安定したポジションに収まります。</p>
+            <p><strong>非活性化時のエラー:</strong></p><ul><li>上半身の前傾とブレ: 広背筋のテンションが抜けていると、バーの重みで上半身が前に倒れやすくなります。</li><li>肩や首への負担: 肩甲骨が不安定なままバーを担ぐと、僧帽筋上部や首周りの筋肉でバーを支えようとしてしまいます。</li></ul>
+            <p><strong>補助エクササイズ:</strong> ストレートアーム・プルダウン<br><strong>中間エクササイズ:</strong> ポーズ・スクワット</p>
 
-            <h3 id="section4-3">4-3. プル系エクササイズ</h3>
-            <h4>ラットプルダウン：背中に効かせる秘訣</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> <strong>「肩甲骨の下制と内転」</strong>が本質です。腕の力ではなく、広背筋という背中の大きな筋肉を主動筋として使う感覚を養います。研究によると、肩甲骨の下制を意識しない場合、広背筋の活性化は40-50%も低下します。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>腕の力（上腕二頭筋）で引き下ろす</li><li>肩が前に出て猫背のまま動作する</li><li>バーを顎の前や首の後ろに引く</li><li>身体を反らしすぎる</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>肩甲骨の可動性: 肩をすくめた状態から、肩甲骨をスムーズに「下げる」「内側に寄せる」ことができるか？</li><li>広背筋の収縮感覚: 背中の筋肉が意識的に収縮しているか、トレーナーが触診して確認する。</li><li>姿勢保持能力: 動作中に胸を張った姿勢を維持できるか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: シングルアームラットプルダウン, シーテッドロウ, バンドプルダウン</li><li>補助エクササイズ: デッドハング / アクティブハング, ゲットアップ</li></ul></li>
-            </ul>
+            <h4 id="hip-lift">2. ヒップリフト / グルートブリッジ</h4>
+            <p>現代人に多い「臀筋健忘（Gluteal Amnesia）」を改善し、より複雑なスクワットやデッドリフトのパフォーマンス向上、さらには腰痛予防にも繋がる土台作りのエクササイズです。</p>
+            <h5>1.【股関節伸展（大殿筋）と腰椎安定の連鎖】</h5>
+            <p><strong>概要:</strong> 動作は「腰を反らせて」お尻を上げるのではなく、あくまで「股関節を伸展させて」骨盤ごと持ち上げることです。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰椎の過伸展（Lumbar Hyperextension）<br><strong>補助エクササイズ:</strong> ペルビックチルト<br><strong>中間エクササイズ:</strong> フロッグパンプ</p>
+            <h5>2.【腹部の引き込み（腹圧）と胸郭のコントロールの連鎖】</h5>
+            <p><strong>概要:</strong> 腹圧を高めて腹横筋を締め、肋骨が開かないように（リブケージダウン）コントロールすることで、腰椎の過伸展を防ぎます。</p>
+            <p><strong>非活性化時のエラー:</strong> リブフレア（Rib Flare）<br><strong>補助エクササイズ:</strong> デッドバグ（90/90 ホールド）<br><strong>中間エクササイズ:</strong> グルートブリッジ with プルオーバー</p>
+            <h5>3.【足底の接地とハムストリングスの関与度調整の連鎖】</h5>
+            <p><strong>概要:</strong> 足を置く位置と、足裏のどこで地面を押すかによって、ハムストリングスと大殿筋の使われる割合が変化します。</p>
+            <p><strong>非活性化時のエラー:</strong> ハムストリングスの過剰使用・痙攣, つま先でのプッシュ<br><strong>補助エクササイズ:</strong> タオル・ハムストリングスカール<br><strong>中間エクササイズ:</strong> ヒップリフト（つま先上げ）</p>
+            <h5>4.【支持脚の中殿筋による骨盤の水平安定化の連鎖】</h5>
+            <p><strong>概要:</strong> 片足で行うシングルレッグ・ヒップリフトにおいて特に重要となります。軸足となっている側の中殿筋が強力に働くことで、持ち上げた脚側の骨盤が下に落ちないように水平に保ちます。</p>
+            <p><strong>非活性化時のエラー:</strong> 骨盤の傾きと回旋（Pelvic Drop/Rotation）<br><strong>補助エクササイズ:</strong> サイドライイング・ヒップアブダクション<br><strong>中間エクササイズ:</strong> Bスタンス・ヒップリフト</p>
 
-            <h4>ワンハンドローイング：体幹と連動したパワフルなプル</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> 片手で引くことで、左右の筋力差を是正するだけでなく、<strong>「体幹を安定させた状態で、胸椎の回旋と肩甲骨の動きを連動させて引く」</strong>という、より機能的な動作の学習が本質です。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>腰（腰椎）まで過剰に回旋させてしまい、体幹が不安定になる</li><li>腕と肩の力だけで、ロープを引くように雑に引き上げる</li><li>骨盤が左右に大きく開いてしまう</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>体幹の安定性: 動作中、腹圧が抜けず、背骨が一直線に保たれているか？</li><li>肩甲骨の動き: 引き始めに、まず肩甲骨が内転する動き（<span class="tooltip">リトラクション<span class="tooltip-text">肩甲骨を背骨に向かって内側に寄せる動き。ローイング動作の基本。</span></span>）から始まっているか？</li><li>胸椎の回旋: 腰ではなく、胸のあたりが適切に回旋し、可動域を生み出せているか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: チェストサポート・ロウ, ケーブルシーテッドロウ（片手）</li><li>補助エクササイズ: スレッドザニードル, バードドッグ, パロフプレス</li></ul></li>
-            </ul>
+            <h4 id="deadlift">3. デッドリフト（Deadlift）</h4>
+            <p>全身の筋肉を動員し、特に身体の後面（ポステリアチェーン：臀筋群、ハムストリングス、脊柱起立筋群）と体幹、握力を爆発的に強化する究極のストレングス種目の一つです。</p>
+            <h5>1.【股関節ヒンジと脊柱中立位を維持する連鎖】</h5>
+            <p><strong>概要:</strong> 「膝を曲げてしゃがむ（スクワット）」のではなく、「股関節を蝶番（ヒンジ）のように折り曲げ、お尻を後ろに突き出す」動きです。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰椎の屈曲（猫背）, スクワット・デッドリフト<br><strong>補助エクササイズ:</strong> ルーマニアンデッドリフト（RDL）<br><strong>中間エクササイズ:</strong> ラックプル / ブロックプル</p>
+            <h5>2.【広背筋によるバーの引きつけと肩甲骨の安定化の連鎖】</h5>
+            <p><strong>概要:</strong> 広背筋は、腕を体に引きつけ、肩甲骨を安定させることでバーベルを身体の近くに保つ役割を担います。</p>
+            <p><strong>非活性化時のエラー:</strong> バーが体から離れる, 上半身の剛性喪失<br><strong>補助エクササイズ:</strong> ストレートアーム・プルダウン<br><strong>中間エクササイズ:</strong> テンポ・デッドリフト</p>
+            <h5>3.【全身のテンション創出と脚による床プッシュの連鎖】</h5>
+            <p><strong>概要:</strong> デッドリフトは「腕や背中で引き上げる」のではなく、「脚で地球を押し込み、その反力で体とバーが一体となって浮き上がる」運動です。</p>
+            <p><strong>非活性化時のエラー:</strong> 尻が先に浮き上がる（Hips Shoot Up）<br><strong>補助エクササイズ:</strong> レッグプレス<br><strong>中間エクササイズ:</strong> デフィシット・デッドリフト</p>
+            <h5>4.【腹圧による体幹の剛体化と力の伝達の連鎖】</h5>
+            <p><strong>概要:</strong> 息を大きく吸い込み、腹部を全方向に膨らませるように腹圧（IAP）を高めることで、脊柱は内側から固められます。</p>
+            <p><strong>非活性化時のエラー:</strong> 挙上中のフォーム崩れ, パワーロス<br><strong>補助エクササイズ:</strong> ファーマーズウォーク<br><strong>中間エクササイズ:</strong> ポーズド・デッドリフト</p>
 
-            <h3 id="section4-4">4-4. 下半身エクササイズ</h3>
-            <h4>スクワット：下半身の王様の本質</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> <strong>「股関節の屈曲・伸展動作の習得」</strong>が本質であり、重量や回数は二の次です。足関節・膝関節・股関節という下肢全体の協調性を高め、あらゆる日常動作やスポーツ動作の基礎となります。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>膝が過度に前に出る（膝への負担増）</li><li>しゃがむ際に腰が丸まる（腰椎への負担増）</li><li>膝が内側に入る（<span class="tooltip">ニーイン<span class="tooltip-text">動作中に膝が内側に入ってしまうエラー。怪我のリスクを高める危険な兆候。</span></span>）</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>足関節の可動性: しゃがんだ時に踵が浮かないか？</li><li>股関節の可動性: 腰を丸めずに十分な深さまでしゃがめるか？</li><li>体幹の安定性: 動作中に背中が丸まったり、過度に反ったりしないか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: ボックススクワット, ゴブレットスクワット, TRXスクワット</li><li>補助エクササイズ: 90/90ヒップモビリティ, 内腹斜筋骨盤操作</li></ul></li>
-            </ul>
+            <h4 id="pulldown">4. プルダウン（Lat Pulldown）</h4>
+            <p>広背筋をメインターゲットとし、逆三角形の広い背中を作るための代表的なマシンエクササイズです。</p>
+            <h5>1.【肩甲骨の下制・内転 - 広背筋主導の連鎖】</h5>
+            <p><strong>概要:</strong> 動作は腕で引くことから始まるのではなく、まず肩甲骨を下げ（下制）、背骨に向かって内側に寄せる（内転）ことから始動します。</p>
+            <p><strong>非活性化時のエラー:</strong> アームプル（Arm Pull）, シュラッグ動作<br><strong>補助エクササイズ:</strong> スキャプラプルダウン<br><strong>中間エクササイズ:</strong> ワイドグリップ・プルダウン（低重量）</p>
+            <h5>2.【肩関節の内転・伸展 - 上腕骨のコントロール連鎖】</h5>
+            <p><strong>概要:</strong> 肘を腰にぶつけるように引き下ろすのが理想的な軌道です。</p>
+            <p><strong>非活性化時のエラー:</strong> 過度なリーンバック（Lean Back）, 肘の開きすぎ<br><strong>補助エクササイズ:</strong> ストレートアーム・プルダウン<br><strong>中間エクササイズ:</strong> クローズグリップ（Vバー）・プルダウン</p>
+            <h5>3.【脊柱の安定化 - 体幹の固定連鎖】</h5>
+            <p><strong>概要:</strong> 動作中、腹圧をかけて体幹を固め、脊柱を過度に反らしたり丸めたりせず、自然なカーブに保つ連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰椎の過伸展（反り腰）, 反動の使用<br><strong>補助エクササイズ:</strong> デッドバグ<br><strong>中間エクササイズ:</strong> ポーズ・プルダウン</p>
+            <h5>4.【前腕（握力）- 手関節の安定 - 効率的な力伝達の連鎖】</h5>
+            <p><strong>概要:</strong> 手首を不必要に曲げ伸ばしせず、前腕と一直線に近い状態（ニュートラル）で固定することで、背中が生み出した力がロスなくバーに伝わります。</p>
+            <p><strong>非活性化時のエラー:</strong> 握力の先行疲労, 手首の屈曲（掌屈）<br><strong>補助エクササイズ:</strong> ファーマーズウォーク<br><strong>中間エクササイズ:</strong> パワーグリップ/リストストラップの使用</p>
 
-            <h4>デッドリフト（RDL系含む）：最強のヒップヒンジ</h4>
-            <ul>
-                <li><strong>本質と目的:</strong> スクワットが「しゃがむ」動作であるのに対し、デッドリフト系の本質は<strong>「股関節から身体を折り曲げる（<span class="tooltip">ヒップヒンジ<span class="tooltip-text">股関節を蝶番のように折り曲げる動作。デッドリフトやスクワットの基本となる動き。</span></span>）」</strong>動作の習得です。ハムストリングスと大臀筋といった身体の裏側（<span class="tooltip">ポステリアチェーン<span class="tooltip-text">ハムストリングス、大臀筋、背筋群など、身体の背面にある筋肉の連なり。爆発的なパワーを生み出す。</span></span>）を効果的に強化し、爆発的なパワーと安定した体幹を生み出します。</li>
-                <li><strong>よくある誤用（Error Patterns）:</strong><ul><li>股関節ではなく膝から曲げてしまい、スクワットのような動作になる</li><li>バーを降ろす際に背中が丸まってしまう（腰椎への極度の負担）</li><li>持ち上げた際に腰を反らしすぎる</li></ul></li>
-                <li><strong>評価ポイント:</strong><ul><li>ヒップヒンジの理解: 膝の角度を最小限に保ち、股関節を基点に上半身を倒すことができるか？</li><li>ハムストリングの柔軟性: ニュートラルな背骨を保ったまま、どこまでバーを降ろせるか？</li><li>体幹の剛性: 動作の全可動域で、腹圧をかけて背骨を一直線に保てるか？</li></ul></li>
-                <li><strong>代替・補助種目:</strong><ul><li>リグレッション（代替種目）: ケトルベルスイング, グッドモーニング（軽負荷）, バンドレジスタンスRDL</li><li>補助エクササイズ: バードドッグ, シングルレッグRDL</li></ul></li>
-            </ul>
+            <h4 id="chinning">5. チンニング（Chin-up / Pull-up）</h4>
+            <p>自重で行う背中トレーニングの王様です。広背筋、大円筋、僧帽筋、菱形筋といった背中全体の筋肉に加え、上腕二頭筋や体幹まで同時に鍛え上げることができます。</p>
+            <h5>1.【肩甲骨の下制・内転 - 身体引き上げの始動連鎖】</h5>
+            <p><strong>概要:</strong> まず肩甲骨を力強く引き下げ（下制）、背骨に寄せる（内転）ことで広背気筋にスイッチを入れます。</p>
+            <p><strong>非活性化時のエラー:</strong> ショルダーパッキングの欠如, ゼロスタートの失敗<br><strong>補助エクササイズ:</strong> スキャプラプル<br><strong>中間エクササイズ:</strong> ネガティブ・チンニング</p>
+            <h5>2.【体幹の剛体化 - スイング防止の連鎖】</h5>
+            <p><strong>概要:</strong> 腹筋群と臀筋群に同時に力を入れ、足から頭までを一本の固い棒のように「剛体化」させる連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong> 意図しないキッピング, ドルフィンキック<br><strong>補助エクササイズ:</strong> ホロウボディ・ホールド<br><strong>中間エクササイズ:</strong> アシステッド・チンニング</p>
+            <h5>3.【胸椎の伸展 - 最大収縮のフィニッシュ連鎖】</h5>
+            <p><strong>概要:</strong> 身体がバーに近づくフィニッシュ局面で、胸を張り、バーに向かって突き出すようにする（胸椎を伸展させる）連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong> 背中の丸まり, アゴだけクリア<br><strong>補助エクササイズ:</strong> シーテッド・ケーブルロウ<br><strong>中間エクササイズ:</strong> ポーズ・チンニング</p>
+            <h5>4.【肩関節と肘関節の協調 - スムーズな引き上げ連鎖】</h5>
+            <p><strong>概要:</strong> 肩関節の伸展・内転と、肘関節の屈曲がスムーズに連動することで、身体が力強く引き上げられる連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong> アームカール・チンニング, 左右非対称な引き上げ<br><strong>補助エクササイズ:</strong> クローズグリップ・プルダウン<br><strong>中間エクササイズ:</strong> リバースグリップ・チンニング</p>
+
+            <h4 id="rowing">6. ローイング（Rowing）</h4>
+            <p>背中の「厚み」を形成する僧帽筋中部・下部、菱形筋、そして広背筋を効果的に鍛えることができます。</p>
+            <h5>1.【肩甲骨の内転・外転 - 可動域の最大化連鎖】</h5>
+            <p><strong>概要:</strong> 腕で引くより先に、肩甲骨を背骨に向かって力強く引き寄せる（内転）ことで、背中の筋肉を最大収縮させます。</p>
+            <p><strong>非活性化時のエラー:</strong> アーム・ローイング, シュラッグ（肩すくめ）<br><strong>補助エクササイズ:</strong> ウォールスライド<br><strong>中間エクササイズ:</strong> ワンハンド・ダンベルロウ</p>
+            <h5>2.【脊柱の安定と股関節ヒンジの維持連鎖】</h5>
+            <p><strong>概要:</strong> 股関節から上半身を深く倒した「ヒンジ」姿勢を、動作中いかなる時も厳密に維持します。</p>
+            <p><strong>非活性化時のエラー:</strong> 上半身の反動, 背中の丸まり<br><strong>補助エクササイズ:</strong> グッドモーニング<br><strong>中間エクササイズ:</strong> インクライン・ダンベルロウ</p>
+            <h5>3.【上腕骨の軌道制御 - ターゲット部位の選択連鎖】</h5>
+            <p><strong>概要:</strong> 肘を引く軌道（角度）を意図的にコントロールすることで、背中のどの部位を重点的に鍛えるかを選択できる運動連鎖です。</p>
+            <p><strong>非活性化時のエラー:</strong> 意図しない部位への刺激, 軌道の不安定<br><strong>補助エクササイズ:</strong> フェイスプル<br><strong>中間エクササイズ:</strong> グリップの選択と意識的なコントロール</p>
+            <h5>4.【肘関節の屈曲と胸椎伸展のフィニッシュ連鎖】</h5>
+            <p><strong>概要:</strong> 背中が収縮し、それに伴って肘が曲がり、最後に胸を張る、という一連の流れが理想です。</p>
+            <p><strong>非活性化時のエラー:</strong> アームカール・ローイング, フィニッシュでの背中の丸まり<br><strong>補助エクササイズ:</strong> コンセントレーションカール<br><strong>中間エクササイズ:</strong> ポーズ・ロウ</p>
+
+            <h4 id="pushup">7. プッシュアップ（Push-up）</h4>
+            <p>大胸筋、三角筋前部、上腕三頭筋といった「押す」筋肉群を総合的に鍛え上げます。</p>
+            <h5>1.【体幹の剛体化 - 一直線の姿勢維持連鎖】</h5>
+            <p><strong>概要:</strong> 頭のてっぺんからかかとまでが、まるで硬い一枚の板になったかのように、常に一直線を保ちます。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰落ちプッシュアップ, お尻上がりプッシュアップ<br><strong>補助エクササイズ:</strong> プランク<br><strong>中間エクササイズ:</strong> インクライン・プッシュアップ</p>
+            <h5>2.【肩甲骨の外転・内転 - 肩の健康と胸の活性化連鎖】</h5>
+            <p><strong>概要:</strong> 身体を下ろす局面では肩甲骨を寄せ（内転）、押し上げる局面では開いていく（外転）滑らかな動きが重要です。</p>
+            <p><strong>非活性化時のエラー:</strong> 肩甲骨の固定, 翼状肩甲（Winging Scapula）<br><strong>補助エクササイズ:</strong> プランク・プッシュアップ<br><strong>中間エクササイズ:</strong> スロー・プッシュアップ</p>
+            <h5>3.【肩関節の水平内転と肘関節伸展の協調連鎖】</h5>
+            <p><strong>概要:</strong> 床を強く押し返すことで、腕が身体の中心線に向かって閉じられる動きと、肘が伸びる動きが協調して起こります。</p>
+            <p><strong>非活性化時のエラー:</strong> 浅い可動域, 肘の過度な開き<br><strong>補助エクササイズ:</strong> アイソメトリック・チェストプレス<br><strong>中間エクササイズ:</strong> ポーズ・プッシュアップ</p>
+            <h5>4.【手関節の安定と前鋸筋の活性化 - 地面への力伝達連鎖】</h5>
+            <p><strong>概要:</strong> 手のひら全体で床をしっかりと捉え、手首が過度に反らないように安定させます。</p>
+            <p><strong>非活性化時のエラー:</strong> 手首の痛み, フィニッシュでの緩み<br><strong>補助エクササイズ:</strong> リストストレッチ<br><strong>中間エクササイズ:</strong> プッシュアップバーの使用</p>
+
+            <h4 id="bench-press">8. ベンチプレス（Bench Press）</h4>
+            <p>上半身を鍛える最も代表的なトレーニング種目です。</p>
+            <h5>1.【足裏-臀部-背中の連鎖 - 全身で作る「アーチ」という土台】</h5>
+            <p><strong>概要:</strong> 足裏で床を踏みしめ、臀部を固定し、背中にアーチを形成する全身を使った土台作りが力の源泉です。</p>
+            <p><strong>非活性化時のエラー:</strong> お尻の浮き, フラットバック<br><strong>補助エクササイズ:</strong> ヒップスラスト<br><strong>中間エクササイズ:</strong> フィートアップ・ベンチプレス</p>
+            <h5>2.【肩甲骨の内転・下制の維持 - 肩関節の安定化連鎖】</h5>
+            <p><strong>概要:</strong> セット中、一貫して肩甲骨を「寄せて下げる（ショルダーパッキング）」状態を維持することが、肩の安全を守る上で最も重要です。</p>
+            <p><strong>非活性化時のエラー:</strong> 肩のプロトラクション（前方突出）, 肩のシュラッグ（挙上）<br><strong>補助エクササイズ:</strong> フェイスプル<br><strong>中間エクササイズ:</strong> スローネガティブ・ベンチプレス</p>
+            <h5>3.【バーの軌道制御 - 最も効率的な挙上連鎖】</h5>
+            <p><strong>概要:</strong> バーは垂直ではなく、みぞおちの上あたりに向かって、わずかに「ハの字」を描くように斜めに下ろし、その逆の軌道で挙上します。</p>
+            <p><strong>非活性化時のエラー:</strong> ギロチンプレス（首へのドロップ）, 腹へのドロップ<br><strong>補助エクササイズ:</strong> プッシュアップ<br><strong>中間エクササイズ:</strong> リバースグリップ・ベンチプレス</p>
+            <h5>4.【手首の固定と前腕の垂直性 - 力をロスなく伝える連鎖】</h5>
+            <p><strong>概要:</strong> ボトムポジションでは、肘の真上に手首が来るようにし、前腕が床に対して垂直になるようにします。</p>
+            <p><strong>非活性化時のエラー:</strong> 手首の過伸展, 前腕の傾き<br><strong>補助エクササイズ:</strong> リバースリストカール<br><strong>中間エクササイズ:</strong> リストラップの使用</p>
+
+            <h4 id="dumbbell-fly">9. ダンベルフライ（Dumbbell Fly）</h4>
+            <p>大胸筋をピンポイントで刺激し、特に筋肉を大きくストレッチさせることに特化したアイソレーション種目です。</p>
+            <h5>1.【肩甲骨の内転・下制固定 - 大胸筋ストレッチの土台連鎖】</h5>
+            <p><strong>概要:</strong> 肩甲骨をベンチに完全に固定することが、大胸筋だけを狙って効果的にストレッチさせるための絶対的な土台となります。</p>
+            <p><strong>非活性化時のエラー:</strong> 肩甲骨の開き, 肩のすくみ<br><strong>補助エクササイズ:</strong> インバーテッドロウ<br><strong>中間エクササイズ:</strong> ケーブルクロスオーバー</p>
+            <h5>2.【肘関節の角度固定 - 「フライ」と「プレス」を分ける連鎖】</h5>
+            <p><strong>概要:</strong> 肘を軽く曲げた角度で「固定」し続け、肩関節を支点として大きな弧を描くように開閉させます。</p>
+            <p><strong>非活性化時のエラー:</strong> フライ・アンド・プレス, 肘のロックアウト<br><strong>補助エクササイズ:</strong> ペックデックマシン<br><strong>中間エクササイズ:</strong> フロア・フライ</p>
+            <h5>3.【肩関節の水平内転 - 大胸筋を絞り込む主動連鎖】</h5>
+            <p><strong>概要:</strong> 腕を閉じる際に、ダンベルを「真上に」持ち上げるのではなく、左右の腕を「中央に」引き寄せる感覚が重要です。</p>
+            <p><strong>非活性化時のエラー:</strong> プレス動作への変換, トップでの負荷抜け<br><strong>補助エクササイズ:</strong> ケーブルクロスオーバー<br><strong>中間エクササイズ:</strong> インクライン・ダンベルフライ</p>
+            <h5>4.【呼吸と胸郭のコントロール連鎖】</h5>
+            <p><strong>概要:</strong> 腕を開いてストレッチする際に息を大きく吸い込み、閉じて収縮させる際に力強く息を吐き出します。</p>
+            <p><strong>非活性化時のエラー:</strong> 無呼吸・浅い呼吸, 胸郭の潰れ<br><strong>補助エクササイズ:</strong> ダンベル・プルオーバー<br><strong>中間エクササイズ:</strong> ストレッチ・ポーズフライ</p>
+
+            <h4 id="crunch">10. クランチ（Crunch）</h4>
+            <p>腰への負担を最小限に抑えながら、腹直筋、特にその上部に的を絞った刺激を与えることができます。</p>
+            <h5>1.【胸郭の引き下げと骨盤の後傾の連鎖 - 腹直筋収縮の核心】</h5>
+            <p><strong>概要:</strong> 息を強く吐きながら肋骨を骨盤側に「引き下げる」動きと、同時におへそを覗き込むように骨盤を後傾させる動きを連動させます。</p>
+            <p><strong>非活性化時のエラー:</strong> シットアップ化, 胸郭の不動<br><strong>補助エクササイズ:</strong> デッドバグ<br><strong>中間エクササイズ:</strong> ボールクランチ</p>
+            <h5>2.【頸部の安定化 - 首への負担軽減連鎖】</h5>
+            <p><strong>概要:</strong> 首の力で頭を持ち上げるのではなく、腹筋の力で背骨を丸め込んだ結果として、頭が自然に持ち上がるようにします。</p>
+            <p><strong>非活性化時のエラー:</strong> ヘッドプル, チン・イン（顎引きすぎ）<br><strong>補助エクササイズ:</strong> チンタック<br><strong>中間エクササイズ:</strong> ハンズフリー・クランチ</p>
+            <h5>3.【股関節屈筋群の非活性化 - 腹筋への刺激集中連鎖】</h5>
+            <p><strong>概要:</strong> 足を固定せず、膝と股関節を90度に曲げて脚を空中に浮かせることで、純粋に腹筋の力だけで動作を行う環境を作ります。</p>
+            <p><strong>非活性化時のエラー:</strong> 足の固定, 脚の力み<br><strong>補助エクササイズ:</strong> グルートブリッジ<br><strong>中間エクササイズ:</strong> テーブルトップ・クランチ</p>
+            <h5>4.【呼吸と腹圧のコントロール連鎖】</h5>
+            <p><strong>概要:</strong> 上体を丸め込むポジティブ局面で、口から「フッ！」と強く短く息を吐き切ります。</p>
+            <p><strong>非活性化時のエラー:</strong> 無呼吸, 逆の呼吸<br><strong>補助エクササイズ:</strong> ダイアフラグマティック・ブリージング<br><strong>中間エクササイズ:</strong> ウェイト・クランチ</p>
+
+            <h4 id="twist-crunch">11. ツイストクランチ（Twisting Crunch）</h4>
+            <p>腹直筋に加えて、脇腹の筋肉である腹斜筋群を重点的に鍛えるエクササイズです。</p>
+            <h5>1.【胸郭の回旋と骨盤の安定化の分離連鎖】</h5>
+            <p><strong>概要:</strong> 骨盤と下半身を床に固定し、胸郭だけを雑巾を絞るように捻ります。</p>
+            <p><strong>非活性化時のエラー:</strong> ローリング（転がり）, 膝のパタパタ<br><strong>補助エクササイズ:</strong> シーテッド・ツイスト<br><strong>中間エクササイズ:</strong> スタンディング・ケーブルウッドチョップ</p>
+            <h5>2.【上体の屈曲と回旋の複合連鎖】</h5>
+            <p><strong>概要:</strong> 「丸める＋捻る」という2つの動きが組み合わさることで、腹直筋と腹斜筋の両方に同時に負荷をかけます。</p>
+            <p><strong>非活性化時のエラー:</strong> ネックツイスト, エルボータッチ<br><strong>補助エクササイズ:</strong> 通常のクランチ<br><strong>中間エクササイズ:</strong> バイシクルクランチ（スローモーション）</p>
+            <h5>3.【動作の速度制御とコントロール連鎖】</h5>
+            <p><strong>概要:</strong> 一回一回の動作を、意図的にゆっくりと、そしてコントロールしながら行うことが効果を高める鍵です。</p>
+            <p><strong>非活性化時のエラー:</strong> 反動を使った高速動作, ネガティブの無視<br><strong>補助エクササイズ:</strong> アイソメトリック・サイドプランクホールド<br><strong>中間エクササイズ:</strong> ポーズ・ツイストクランチ</p>
+            <h5>4.【呼吸と回旋の同調連鎖】</h5>
+            <p><strong>概要:</strong> 身体を丸めながら捻っていくポジティブ局面で、口から力強く息を「フッ！」と吐き切ります。</p>
+            <p><strong>非活性化時のエラー:</strong> 無呼吸, 速すぎる動作による呼吸の乱れ<br><strong>補助エクササイズ:</strong> シーテッド・ツイストでの呼吸練習<br><strong>中間エクササイズ:</strong> ケーブル・ウッドチョップ</p>
+
+            <h4 id="plank">12. プランク（Plank）</h4>
+            <p>腹横筋を中心とした深層筋（インナーマッスル）を安全かつ効果的に鍛え、姿勢の改善、腰痛の予防・改善に繋がります。</p>
+            <h5>1.【脊柱のニュートラル維持 - インナーユニットの共同収縮連鎖】</h5>
+            <p><strong>概要:</strong> 腹横筋、多裂筋、骨盤底筋群のインナーユニットが協調して働き、完璧なニュートラルスパインを維持します。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰落ち（Sway Back）, お尻上がり（Pike）<br><strong>補助エクササイズ:</strong> デッドバグ<br><strong>中間エクササイズ:</strong> ニーリング・プランク</p>
+            <h5>2.【肩甲骨の安定化と前鋸筋の活性化 - 上半身の土台連鎖】</h5>
+            <p><strong>概要:</strong> 前腕全体で床を力強く「押し込む」意識を持ち、肩甲骨を安定させます。</p>
+            <p><strong>非活性化時のエラー:</strong> 肩甲骨の陥没, 翼状肩甲（Winging Scapula）<br><strong>補助エクササイズ:</strong> プランク・プッシュアップ<br><strong>中間エクササイズ:</strong> ハイプランク</p>
+            <h5>3.【臀筋群と大腿四頭筋の活性化 - 下半身からの剛体化連鎖】</h5>
+            <p><strong>概要:</strong> お尻を締め、膝を伸ばし、脚全体を一本の棒のようにまっすぐに保ちます。</p>
+            <p><strong>非活性化時のエラー:</strong> 臀筋の弛緩, 膝の曲がり<br><strong>補助エクササイズ:</strong> グルートブリッジ<br><strong>中間エクササイズ:</strong> プランク・レッグリフト</p>
+            <h5>4.【全身のテンションと呼吸のコントロール連鎖】</h5>
+            <p><strong>概要:</strong> 全身の筋肉に力を入れてテンションを高め、呼吸は止めずに深くゆっくりとした腹式呼吸を続けます。</p>
+            <p><strong>非活性化時のエラー:</strong> 無呼吸, 脱力<br><strong>補助エクササイズ:</strong> ダイアフラグマティック・ブリージング<br><strong>中間エクササイズ:</strong> RKCプランク</p>
+
+            <h4 id="side-plank">13. サイドプランク（Side Plank）</h4>
+            <p>身体の側面を支える腹斜筋群と、骨盤を安定させる中殿筋を鍛えるのに非常に効果的です。</p>
+            <h5>1.【側面の剛体化 - 腹斜筋と中殿筋の協調連鎖】</h5>
+            <p><strong>概要:</strong> 床についている側の腹斜筋と中殿筋を強力に収縮させ、身体を一枚の板のように床から持ち上げます。</p>
+            <p><strong>非活性化時のエラー:</strong> 腰落ち, 腰の前後屈曲<br><strong>補助エクササイズ:</strong> サイドライイング・クラムシェル<br><strong>中間エクササイズ:</strong> ニーリング・サイドプランク</p>
+            <h5>2.【支持肩の安定化と胸郭の垂直性維持連鎖】</h5>
+            <p><strong>概要:</strong> 支持している側の肩の真下に肘を置き、前腕で床を強く押すようにして肩甲骨を安定させます。</p>
+            <p><strong>非活性化時のエラー:</strong> 肩すくみ, 胸の倒れ<br><strong>補助エクササイズ:</strong> 通常のプランク<br><strong>中間エクササイズ:</strong> サイドプランク・ローテーション</p>
+            <h5>3.【両脚の統合と足部の安定化連鎖】</h5>
+            <p><strong>概要:</strong> 両脚はぴったりと揃えて重ね、内ももにも力を入れて両脚を一つに統合する意識が重要です。</p>
+            <p><strong>非活性化時のエラー:</strong> 脚のズレ, 足首の不安定<br><strong>補助エクササイズ:</strong> ボールスクイーズ・ブリッジ<br><strong>中間エクササイズ:</strong> スタッガード・サイドプランク</p>
+            <h5>4.【頭部と脊柱の直線アライメント連鎖】</h5>
+            <p><strong>概要:</strong> 頸椎から骨盤までが一直線の綺麗なラインを描くように、頭部の位置をコントロールします。</p>
+            <p><strong>非活性化時のエラー:</strong> ヘッドドロップ, 過剰なルックアップ/ダウン<br><strong>補助エクササイズ:</strong> チンタック<br><strong>中間エクササイズ:</strong> ミラー・フィードバック</p>
             
             <div class="key-terms">
                 <h4>本章の重要語句解説</h4>
                 <dl>
-                    <dt>リグレッション</dt><dd>エクササイズの難易度を下げること。クライアントを成功に導くための重要な戦略。</dd>
-                    <dt>ショルダーパッキング</dt><dd>肩甲骨を安定した位置（下制・後傾）に保つこと。プレス系動作の土台となるスキル。</dd>
-                    <dt>リトラクション</dt><dd>肩甲骨を背骨に向かって内側に寄せる動き。ローイング動作の基本。</dd>
+                    <dt>キネティックチェーン（運動連鎖）</dt><dd>身体の各部分が鎖のように連動して動くこと。一つの関節の動きが他の関節に影響を与える。</dd>
                     <dt>ニーイン</dt><dd>動作中に膝が内側に入ってしまうエラー。怪我のリスクを高める危険な兆候。</dd>
                     <dt>ヒップヒンジ</dt><dd>股関節を蝶番のように折り曲げる動作。デッドリフトやスクワットの基本となる動き。</dd>
                     <dt>ポステリアチェーン</dt><dd>ハムストリングス、大臀筋、背筋群など、身体の背面にある筋肉の連なり。爆発的なパワーを生み出す。</dd>
@@ -524,46 +477,14 @@
 
         <section id="chapter5" class="content-section">
             <h2>第5章：知識の拡張 - 一歩先のトレーナーになるために</h2>
-            <p>これまでの章で、あなたはクライアントの動きを評価し、それに基づいた効果的なプログラムを設計するための強固な土台を築きました。しかし、真のプロフェッショナルは、常に知識をアップデートし、その領域を拡張し続けます。</p>
-            <p>この最終章では、標準的なエクササイズの範疇を超え、クライアントの回復を促進し、学習能力を最大化し、より深いレベルで身体の謎を解き明かすための先進的なトピックを扱います。この知識は、あなたを他のトレーナーから一歩抜きん出た存在へと引き上げてくれるでしょう。</p>
-
             <h3 id="section5-1">5-1. 外傷対応の新常識：RICEからPEACE & LOVEへ</h3>
-            <p>トレーニング指導において、クライアントの軽い捻挫や肉離れといった急性外傷に遭遇する可能性はゼロではありません。その際の初期対応は、クライアントの回復過程に大きな影響を与えます。長年、この領域のゴールドスタンダードとされてきたのは「RICE処置」でしたが、最新の科学的知見は、私たちに新たなアプローチを求めています。</p>
-            <h4>なぜRICE処置は推奨されなくなったのか？</h4>
-            <p>RICE処置（Rest:安静, Ice:冷却, Compression:圧迫, Elevation:挙上）は、1978年にGabe Mirkin医師によって提唱されました。しかし、驚くべきことに、2015年に提唱者自身が「アイシングが治癒を遅らせる可能性がある」と述べ、従来の方針を見直す必要性を指摘したのです。</p>
-            <p>その科学的根拠は、「<span class="tooltip">炎症<span class="tooltip-text">身体の組織が損傷した際に起こる、治癒に不可欠な防御反応。かつては悪者とされたが、現在は組織修復の第一段階として重要視される。</span></span>」に対する理解の変化にあります。かつて悪者とされた炎症は、実は組織修復に不可欠な第一段階のプロセスであることがわかってきました。</p>
-            <p><strong>アイシングの問題点:</strong> 研究によると、アイシングは治癒に必要な炎症性マクロファージ（損傷組織を除去し、修復を促す細胞）の活動を抑制し、筋肉や腱の再生に関わるIGF-1（インスリン様成長因子1）の産生を最大33%減少させる可能性が示されています。つまり、良かれと思って行っていた冷却が、結果的に身体の自然な治癒プロセスを遅延させていたかもしれないのです。</p>
-            <h4>PEACE & LOVE：急性期から回復期までの具体的な処置法</h4>
-            <p>この新しい理解に基づき、2020年に英国のスポーツ医学雑誌『British Journal of Sports Medicine』で提唱されたのが<strong>「PEACE & LOVE」</strong>アプローチです。これは、身体の自然治癒力を最大限に尊重し、サポートすることを目指す、より包括的なガイドラインです。</p>
-            <h5>【急性期（受傷後～72時間）：PEACE】</h5>
-            <ul>
-                <li><strong>P - Protect (保護):</strong> 過度な動きや負荷を避け、組織を保護する。</li>
-                <li><strong>E - Elevate (挙上):</strong> 患部を心臓より高く保ち、浮腫（むくみ）を軽減する。</li>
-                <li><strong>A - Avoid anti-inflammatories (抗炎症薬を避ける):</strong> 組織治癒の自然なプロセスを妨げないよう、非ステロイド性抗炎症薬（NSAIDs）などの使用を最小限に留める。</li>
-                <li><strong>C - Compress (圧迫):</strong> 弾性包帯などで適切に圧迫し、過剰な浮腫を制御する。</li>
-                <li><strong>E - Educate (教育):</strong> クライアントに対し、過度な医療介入（不必要な検査や治療）を避け、身体が持つ自然治癒力の重要性を伝える。</li>
-            </ul>
-            <h5>【回復期（急性期以降）：LOVE】</h5>
-            <ul>
-                <li><strong>L - Load (負荷):</strong> 痛みのない範囲で、早期から適切な負荷をかける。負荷は組織の修復と強度向上を促進します。</li>
-                <li><strong>O - Optimism (楽観):</strong> 心理的要因は治癒に大きく影響します。クライアントが回復に対して前向きな姿勢を維持できるようサポートする。</li>
-                <li><strong>V - Vascularisation (血流促進):</strong> 心肺機能を高める有酸素運動を取り入れ、患部への血流を促進し、治癒を加速させる。</li>
-                <li><strong>E - Exercise (運動):</strong> 関節可動域、筋力、固有受容感覚を回復させるための、段階的な運動プログラムを積極的に実施する。</li>
-            </ul>
-            <p>このPEACE & LOVEアプローチを理解しておくことは、クライアントに対するあなたの責任と専門性を示す上で、極めて重要です。</p>
+            <p>最新の科学的知見は、急性外傷の初期対応として、従来のRICE処置に代わり「PEACE & LOVE」アプローチを推奨しています。アイシングは治癒に必要な炎症プロセスを阻害する可能性があるためです。</p>
 
             <h3 id="section5-2">5-2. 運動学習を促進するアプローチ</h3>
-            <h4>ディファレンシャルラーニング（差分学習）とは何か？</h4>
-            <p>ディファレンシャルラーニングとは、同じ動きを何度も繰り返すのではなく、あえて多様な変化（差分）を加えながら、クライアント自身に最適な動きを見つけさせるトレーニング法です。これは「遊びながら学ぶ」という考えに基づいています。</p>
-            
-            <h4>コミュニケイティブなエクササイズの重要性</h4>
-            <p>一般的なジムでのトレーニングは、黙々と自分と向き合う<strong>「ノンコミュニケイティブ（非対話的）」になりがちです。しかし、スポーツや日常生活での動きの多くは、人や物、環境と相互作用する「コミュニケイティブ（対話的）」</strong>なものです。</p>
-            <p>クライアントの身体能力をより実用的なレベルに引き上げるためには、意図的に対話的な要素を取り入れることが有効です。</p>
+            <p>同じ動きを繰り返すのではなく、あえて多様な変化（差分）を加え、クライアント自身に最適な動きを見つけさせる「ディファレンシャルラーニング」や、他者や環境と相互作用する「コミュニケイティブなエクササイズ」は、学習効果を飛躍的に高めます。</p>
 
             <h3 id="section5-3">5-3. 考慮すべきその他の現象</h3>
-            <h4>バイラテラルディフィシット（両側性欠損）とは？</h4>
-            <p>これは、筋力発揮に関する非常に興味深い現象です。<span class="tooltip">バイラテラルディフィシット<span class="tooltip-text">両手・両足で同時に力を出すと、片側ずつ力を出した時の合計よりもパワーが低下する現象。片側性トレーニングの重要性を示唆する。</span></span>とは、両手や両足（両側）を同時に動かした場合の合計の力発揮が、それぞれ片側ずつを動かした場合の力の合計よりも小さくなる現象を指します。</p>
-            <p><strong>指導への応用:</strong> プログラムには、ダンベルランジ、ブルガリアンスクワット、シングルアームプレス、シングルレッグRDLといった片側性（ユニラテラル）エクササイズを意図的に組み込むべきです。これらは、最大筋力の向上だけでなく、左右差の是正、そして体幹の安定性向上にも極めて効果的です。</p>
+            <p><span class="tooltip">バイラテラルディフィシット<span class="tooltip-text">両手・両足で同時に力を出すと、片側ずつ力を出した時の合計よりもパワーが低下する現象。片側性トレーニングの重要性を示唆する。</span></span>とは、両側性エクササイズよりも片側性エクササイズの方が、合計の力発揮が大きくなる現象です。プログラムには片側性種目を意図的に組み込むべきです。</p>
             
             <div class="key-terms">
                 <h4>本章の重要語句解説</h4>
@@ -577,51 +498,34 @@
 
         <section id="conclusion" class="content-section">
             <h2>おわりに：生涯学習者として</h2>
-            <p>ここまで、この長いマニュアルを読み進めていただき、誠にありがとうございました。あなたは今、クライアントの身体をより深く理解し、その成果を最大化するための、強力な思考法と実践的なツールを手に入れたはずです。</p>
-            <p>しかし、このマニュアルはあなたのゴールではありません。これは、あなたのトレーナーとしてのキャリアを、より深く、より確かなものにするための<strong>「スタートライン」</strong>です。</p>
-            <p>最後に、あなたが「本物のトレーナー」として成長し続けるために、常に心に留めておいてほしい3つの心構えと、次なるステップを記します。</p>
-            
-            <div class="callout callout-principle"><span class="callout-title">原則1：評価なくして、プログラムなし</span><p>あなたの専門性の根幹をなす絶対的な原則です。クライアントの姿勢、可動性、動作パターンを観察する「目」を養い続けてください。適切な評価に基づいたプログラム設計こそが、怪我のリスクを低減し、クライアントの目標達成率を飛躍的に向上させるのです。</p></div>
-            <div class="callout callout-principle"><span class="callout-title">原則2：「なぜ、この種目なのか？」を常に自問する</span><p>あなたの指導の一つ一つに、明確な意図と根拠を持つことが、クライアントからの揺るぎない信頼に繋がります。種目選択の理由を自信を持って説明できるトレーナーは、クライアントのモチベーションと継続率が高いことが示されています。決して思考を停止させてはいけません。</p></div>
-            <div class="callout callout-principle"><span class="callout-title">原則3：リグレッション（難易度を下げる）は逃げではない</span><p>それは、クライアントに正しいフォームを習得させるための、最も効果的で知的な<strong>「戦略」</strong>です。目先の重量や回数に固執せず、クライアントの長期的な成功を最優先する勇気を持ちましょう。適切なリグレッションを行ったクライアントは、長期的に見て、より高いパフォーマンス向上を示すことが確認されています。</p></div>
-            
-            <p>この思考法を実践する、科学的根拠に基づいた指導を行うトレーナーのクライアントは、そうでない場合と比較して、以下のことが示されています。</p>
-            <ul>
-                <li>怪我の発生率が<strong>58%</strong>低い</li>
-                <li>目標達成率が<strong>43%</strong>高い</li>
-                <li>トレーニング継続率が<strong>67%</strong>高い</li>
-            </ul>
-            <p>あなたの実践の一つ一つが、クライアントの人生にこれほど大きなポジティブな影響を与えるのです。</p>
-
-            <h4>あなたの指導を進化させるための次のステップ</h4>
-            <ul>
-                <li>→ 解剖学と生体力学の基礎知識を、さらに深める</li>
-                <li>→ 動作分析のスキルを、実践を通じて向上させる</li>
-                <li>→ 最新の研究論文や専門書に、習慣的に触れる</li>
-                <li>→ 日々の指導という実践と、その振り返りを繰り返し、自分の指導法を絶えず進化させる</li>
-            </ul>
-            <p>あなたの成長は、そのままクライアントの利益に直結します。 このマニュアルが、あなたの輝かしいトレーナーとしてのキャリアの一助となることを、心から願っています。</p>
+            <p>このマニュアルはゴールではなく、あなたのキャリアの<strong>「スタートライン」</strong>です。</p>
+            <div class="callout callout-principle"><span class="callout-title">原則1：評価なくして、プログラムなし</span><p>あなたの専門性の根幹です。適切な評価が怪我のリスクを低減し、目標達成率を向上させます。</p></div>
+            <div class="callout callout-principle"><span class="callout-title">原則2：「なぜ、この種目なのか？」を常に自問する</span><p>指導の一つ一つに明確な意図と根拠を持つことが、クライアントからの信頼に繋がります。</p></div>
+            <div class="callout callout-principle"><span class="callout-title">原則3：リグレッションは逃げではない</span><p>クライアントに正しいフォームを習得させるための、最も効果的で知的な「戦略」です。</p></div>
         </section>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Table of Contents active link script
             const tocLinks = document.querySelectorAll('#table-of-contents a');
-            const sections = document.querySelectorAll('.content-section');
+            const sections = document.querySelectorAll('.content-section, h4');
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        const id = entry.target.id;
                         tocLinks.forEach(link => {
                             link.classList.remove('active');
-                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            if (link.getAttribute('href') === '#' + id) {
                                 link.classList.add('active');
                             }
                         });
                     }
                 });
-            }, { rootMargin: "-50% 0px -50% 0px" });
+            }, {
+                rootMargin: '0px 0px -70% 0px',
+                threshold: 0
+            });
 
             sections.forEach(section => {
                 observer.observe(section);
